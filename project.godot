@@ -11,10 +11,11 @@ config_version=3
 [application]
 
 config/name="Tetrisrun"
+run/main_scene="res://main/main.tscn"
 
 [autoload]
 
-global="*res://global.gd"
+global="*res://main/global.gd"
 
 [display]
 

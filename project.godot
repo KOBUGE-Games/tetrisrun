@@ -8,6 +8,14 @@
 
 config_version=3
 
+[application]
+
+config/name="Tetrisrun"
+
+[autoload]
+
+global="*res://global.gd"
+
 [display]
 
 window/stretch/mode="viewport"

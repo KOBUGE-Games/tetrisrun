@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 # class member variables go here, for example:
 # var a = 2
@@ -13,3 +13,19 @@ func _ready():
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
+
+
+func _on_start_endless_button_pressed():
+	pass # replace with function body
+
+
+func _on_start_fixed_button_pressed():
+	pass # replace with function body
+
+
+func _on_options_button_pressed():
+	pass # replace with function body
+
+
+func _on_exit_button_pressed():
+	get_tree().quit()

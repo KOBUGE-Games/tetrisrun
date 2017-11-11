@@ -1,10 +1,25 @@
 # DEV
 
+## Project architecture
+
+### Files
+
+* DEVREADME.md : File for developers and contributors to coordinate their brave effort
+* LICENSE : the license file...
+* README.md : File displayed on github
+
+### Folders
+
+* audio : contains all audio files
+* gfx : contains all images
+* level : contains scenes and scripts and tilesets related to the level
+* main : contains general scenes and scripts such as the main scene and global autoload
+* menu : contains scenes ans scripts related to user interfaces
+* runner : contains scenes and scripts related to the runner
 
 ## Technical choices
 
 * Runner stays at horizontal coordinate 0, the environment moves. Tests have to be done to know what type of physics node runner needs to be.
-
 
 ## Notes
 
@@ -28,3 +43,5 @@ This section is to document arts which aren't meant to be definitive but just he
 ## TODO 
 
 Almost everything...
+
+* Add licence in every folder?

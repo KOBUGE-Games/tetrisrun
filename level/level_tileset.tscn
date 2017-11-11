@@ -9,7 +9,11 @@ extents = Vector2( 50, 50 )
 
 [node name="level_tileset" type="Node2D"]
 
-[node name="ground_tile" type="StaticBody2D" parent="."]
+[node name="ground_tile" type="Sprite" parent="."]
+
+texture = ExtResource( 1 )
+
+[node name="static_body_2d" type="StaticBody2D" parent="ground_tile"]
 
 input_pickable = false
 collision_layer = 1
@@ -19,11 +23,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="sprite" type="Sprite" parent="ground_tile"]
-
-texture = ExtResource( 1 )
-
-[node name="collision_shape_2d" type="CollisionShape2D" parent="ground_tile"]
+[node name="collision_shape_2d" type="CollisionShape2D" parent="ground_tile/static_body_2d"]
 
 shape = SubResource( 1 )
 

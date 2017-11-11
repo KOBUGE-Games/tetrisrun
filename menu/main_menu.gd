@@ -20,7 +20,7 @@ func _on_start_endless_button_pressed():
 
 
 func _on_start_fixed_button_pressed():
-	pass # replace with function body
+	get_tree().change_scene_to(global.fixed_level_scene)
 
 
 func _on_options_button_pressed():

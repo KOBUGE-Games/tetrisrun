@@ -1,12 +1,13 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://runner/runner.gd" type="Script" id=1]
-[ext_resource path="res://gfx/ball.png" type="Texture" id=2]
+[ext_resource path="res://gfx/player_mockup.png" type="Texture" id=2]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 25.0
+radius = 11.0
+height = 10.0
 
 [node name="runner" type="RigidBody2D"]
 

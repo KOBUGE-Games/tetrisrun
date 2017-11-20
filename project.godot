@@ -26,6 +26,11 @@ window/stretch/aspect="keep"
 
 singletons=[  ]
 
+[input]
+
+jump=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
+ ]
+
 [node]
 
 name_casing=2

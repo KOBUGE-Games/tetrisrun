@@ -1,27 +1,36 @@
 extends RigidBody2D
 
-
-
-var State = {
-	"Idle": 0,
-	"Running": 1,
-	"Dead": 2
+enum State {
+	Idle,
+	Running,
+	Dead,
 }
 var state = State.Idle
+onready var floor_ray = $floor_ray
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	pass
+	set_running()
 
-func _process(delta):
-	if( state == State.Running ):
-		linear_velocity = Vector2(global.runner_speed)
+func _integrate_forces(forces):
+	if state == State.Running:
+		var velocity = forces.get_linear_velocity()
+		velocity.x = global.runner_speed
+		
+		if Input.is_action_pressed("jump") and floor_ray.is_colliding():
+			velocity.y = -global.runner_jump
+		
+		forces.set_linear_velocity(velocity)
 
 
 func set_idle():
 	state = State.Idle
+	$animation_player.play("idle")
+
 func set_running():
 	state = State.Running
+	set_sleeping(false)
+	$animation_player.play("run")
+
 func set_dead():
 	state = State.Dead
+	$animation_player.play("idle") # TODO

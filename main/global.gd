@@ -1,10 +1,10 @@
 extends Node
 
-const runner_radius = 50
-const runner_circumference = 2 * PI * runner_radius
-const runner_speed = 10
+const runner_radius = 11.0 # px
+const runner_speed = 100.0 # px/s
+const runner_jump = 250.0 # px/s
 
-const tile_size = 100
+const tile_size = 32.0 # px
 
 const fixed_level_scene = preload("res://level/fixed_level.tscn")
 

@@ -2,25 +2,7 @@
 
 [ext_resource path="res://menu/main_menu.gd" type="Script" id=1]
 
-[node name="main_menu" type="Control"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 374.0
-margin_top = 50.0
-margin_right = 674.0
-margin_bottom = 550.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-script = ExtResource( 1 )
-_sections_unfolded = [ "Rect" ]
-
-[node name="panel_container" type="PanelContainer" parent="."]
+[node name="main_menu" type="CenterContainer"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -31,6 +13,27 @@ rect_clip_content = false
 mouse_filter = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+use_top_left = false
+script = ExtResource( 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="panel_container" type="PanelContainer" parent="."]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 362.0
+margin_top = 75.0
+margin_right = 662.0
+margin_bottom = 525.0
+rect_min_size = Vector2( 300, 450 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
 
 [node name="panel" type="Panel" parent="panel_container"]
 
@@ -41,7 +44,7 @@ anchor_bottom = 0.0
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 293.0
-margin_bottom = 493.0
+margin_bottom = 443.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0

@@ -30,18 +30,16 @@
 This section is to document arbitrary choices who may be reworked
 
 * Screen is 1024x600, default
-* Runner is 50x50
-* Tiles are 100x100
-* Runner starts at 150,375, allowing 3 tiles under it
+* Runner is 32x32
+* Tiles are 32x32
+* Runner starts at 150,395, allowing ~11 tiles under it
 
 ## Placeholder art
 
 This section is to document arts which aren't meant to be definitive but just here as placeholder
 
-* Everything ATM.
+* Nothing right now, barring any finish-ups
 
 ## TODO 
 
-Almost everything...
-
-* Add licence in every folder?
+Refer to [the issues](https://github.com/KOBUGE-Games/tetrisrun/issues)

@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://level/moving_frame.gd" type="Script" id=1]
+
+[sub_resource type="LineShape2D" id=1]
+
+custom_solver_bias = 0.0
+normal = Vector2( 1, 0 )
+d = 0.0
+
+[sub_resource type="LineShape2D" id=2]
+
+custom_solver_bias = 0.0
+normal = Vector2( 0, -1 )
+d = 0.0
+
+[node name="moving_frame" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+runner_path = "../runner"
+tilemap_path = "../tile_map"
+
+[node name="tile_spawn_pos" type="Position2D" parent="."]
+
+position = Vector2( 528, 16 )
+
+[node name="death_planes" type="StaticBody2D" parent="." groups=[
+"death",
+]]
+
+input_pickable = false
+collision_layer = 3
+collision_mask = 3
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="death_planes"]
+
+position = Vector2( 0, 300 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="collision_shape_2d2" type="CollisionShape2D" parent="death_planes"]
+
+position = Vector2( 512, 672 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+

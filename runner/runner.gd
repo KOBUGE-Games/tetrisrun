@@ -20,6 +20,10 @@ func _integrate_forces(forces):
 			velocity.y = -global.runner_jump
 		
 		forces.set_linear_velocity(velocity)
+		
+		for contact in forces.get_contact_count():
+			if forces.get_contact_collider_object(contact).is_in_group("death"):
+				set_dead()
 
 
 func set_idle():
@@ -33,4 +37,7 @@ func set_running():
 
 func set_dead():
 	state = State.Dead
+	collision_mask = 0
+	collision_layer = 0
+	linear_damp = 2
 	$animation_player.play("idle") # TODO

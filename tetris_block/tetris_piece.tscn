@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://gfx/tileset.png" type="Texture" id=1]
+[ext_resource path="res://gfx/outline_sides.png" type="Texture" id=2]
+[ext_resource path="res://gfx/outline_corners.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 15.5, 15.5 )
+
+[node name="piece1" type="CollisionShape2D"]
+
+shape = SubResource( 1 )
+
+[node name="sprite" type="Sprite" parent="."]
+
+z_as_relative = false
+texture = ExtResource( 1 )
+hframes = 7
+frame = 2
+_sections_unfolded = [ "Animation", "Z" ]
+
+[node name="outline_sides" type="Sprite" parent="."]
+
+z = -1
+z_as_relative = false
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Animation", "Z" ]
+
+[node name="outline_corners" type="Sprite" parent="."]
+
+z = -2
+z_as_relative = false
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Animation", "Visibility", "Z" ]
+
+

@@ -24,6 +24,8 @@ func _integrate_forces(forces):
 		for contact in forces.get_contact_count():
 			if forces.get_contact_collider_object(contact).is_in_group("death"):
 				set_dead()
+		
+		$gui/screen/label.text = "%0*.1f m" % [10, position.x / global.tile_size]
 
 
 func set_idle():

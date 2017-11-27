@@ -2,7 +2,7 @@
 
 [ext_resource path="res://level/moving_frame.gd" type="Script" id=1]
 
-[sub_resource type="SegmentShape2D" id=3]
+[sub_resource type="SegmentShape2D" id=1]
 
 custom_solver_bias = 0.0
 a = Vector2( 0, -372 )
@@ -41,13 +41,13 @@ _sections_unfolded = [ "Collision" ]
 [node name="collision_shape_2d" type="CollisionShape2D" parent="death_planes"]
 
 position = Vector2( 0, 300 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="collision_shape_2d3" type="CollisionShape2D" parent="death_planes"]
 
 position = Vector2( 1024, 300 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="collision_shape_2d2" type="CollisionShape2D" parent="death_planes"]
@@ -55,5 +55,28 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( 512, 672 )
 shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="camera_2d" type="Camera2D" parent="."]
+
+anchor_mode = 0
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
 
 

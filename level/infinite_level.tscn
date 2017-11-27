@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://level/infinite_level.gd" type="Script" id=1]
+[ext_resource path="res://level/level_tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://level/moving_frame.tscn" type="PackedScene" id=3]
+[ext_resource path="res://runner/runner.tscn" type="PackedScene" id=4]
+[ext_resource path="res://level/level_background.tscn" type="PackedScene" id=5]
+
+[node name="infinite_level" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tile_map_a" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 4
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 3
+collision_mask = 3
+occluder_light_mask = 1
+tile_data = PoolIntArray( 983040, 0, 983041, 0, 983042, 0, 983043, 0, 983044, 0, 983045, 0, 983046, 0, 983047, 0, 983048, 0, 983049, 0, 983050, 0, 983051, 0, 983052, 0, 983053, 0, 983054, 0, 983055, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="tile_map_b" type="TileMap" parent="."]
+
+position = Vector2( 512, 0 )
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 4
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 3
+collision_mask = 3
+occluder_light_mask = 1
+tile_data = PoolIntArray(  )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="moving_frame" parent="." instance=ExtResource( 3 )]
+
+tilemap_path = NodePath("../tile_map_a")
+
+[node name="runner" parent="." instance=ExtResource( 4 )]
+
+position = Vector2( 150, 395 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="parallax_background" parent="." instance=ExtResource( 5 )]
+
+

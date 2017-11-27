@@ -31,6 +31,7 @@ func _physics_process(delta):
 		for shape_name in TetrisBlock.TetrisShapes:
 			if Input.is_action_just_pressed("spawn_tetris_%s" % shape_name.to_lower()):
 				spawn_tetris_block(TetrisBlock.TetrisShapes[shape_name])
+				break
 
 func spawn_tetris_block(shape):
 	active_tetris_block = TetrisBlockScene.instance()

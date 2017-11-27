@@ -66,7 +66,7 @@ func _physics_process(delta):
 			
 		if collision != null:
 			if collision.collider is TileMap:
-				solidify(collision.collider)
+				solidify(get_parent().active_tilemap)
 			elif collision.collider.is_in_group("death"):
 				queue_free()
 
@@ -83,7 +83,7 @@ func set_shape(shape):
 
 func solidify(tilemap):
 	for piece in pieces:
-		var cell = tilemap.world_to_map(piece.global_position)
+		var cell = tilemap.world_to_map(piece.global_position - tilemap.global_position)
 		if tilemap.get_cellv(cell) == -1:
 			tilemap.set_cellv(cell, piece.get_child(0).frame)
 	queue_free()

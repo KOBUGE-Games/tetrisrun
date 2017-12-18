@@ -4,6 +4,10 @@ importer="texture"
 type="StreamTexture"
 path="res://.import/outline_corners.png-daa1a768ef739c269597971ef740d0f7.stex"
 
+[deps]
+
+source_md5="e825f56ba409b5c2177bd431498995ac"
+
 [params]
 
 compress/mode=0

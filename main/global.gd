@@ -11,8 +11,6 @@ const tile_movement_speed = 450.0 # px/s
 
 const max_standing_time = 1.0 # s
 
-const fixed_level_scene = preload("res://level/fixed_level.tscn")
-
 
 func _ready():
 	pass

@@ -4,6 +4,10 @@ importer="texture"
 type="StreamTexture"
 path="res://.import/outline_sides.png-4b2a19ddabdd95debb9e748c3b33868b.stex"
 
+[deps]
+
+source_md5="67487b304abdfdc8e408452bc0263c20"
+
 [params]
 
 compress/mode=0

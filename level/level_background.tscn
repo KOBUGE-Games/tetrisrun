@@ -18,9 +18,9 @@ _sections_unfolded = [ "Scroll" ]
 
 [node name="parallax_layer" type="ParallaxLayer" parent="."]
 
-motion_scale = Vector2( 0.5, 0.5 )
+motion_scale = Vector2( 1, 1 )
 motion_offset = Vector2( 0, 0 )
-motion_mirroring = Vector2( 1024, 600 )
+motion_mirroring = Vector2( 0, 0 )
 _sections_unfolded = [ "Motion" ]
 
 [node name="texture_rect" type="TextureRect" parent="parallax_layer"]

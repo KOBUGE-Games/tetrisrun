@@ -29,4 +29,7 @@ func fill_next_tilemap():
 	next_tilemap.clear()
 	for i in range(TILEMAP_SIZE):
 		var height = generator.generate_height()
-		next_tilemap.set_cell(i, TILEMAP_HEIGHT - height, 0)
+		if height >= 0:
+			next_tilemap.set_cell(i, TILEMAP_HEIGHT - height, 0)
+			for j in range(height):
+				next_tilemap.set_cell(i, TILEMAP_HEIGHT - j, 1)

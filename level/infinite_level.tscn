@@ -28,8 +28,9 @@ collision_bounce = 0.0
 collision_layer = 3
 collision_mask = 3
 occluder_light_mask = 1
-tile_data = PoolIntArray( 983040, 0, 983041, 0, 983042, 0, 983043, 0, 983044, 0, 983045, 0, 983046, 0, 983047, 0, 983048, 0, 983049, 0, 983050, 0, 983051, 0, 983052, 0, 983053, 0, 983054, 0, 983055, 0 )
-_sections_unfolded = [ "Cell", "Transform" ]
+format = 1
+tile_data = PoolIntArray( 983040, 0, 0, 983041, 0, 0, 983042, 0, 0, 983043, 0, 0, 983044, 0, 0, 983045, 0, 0, 983046, 0, 0, 983047, 0, 0, 983048, 0, 0, 983049, 0, 0, 983050, 0, 0, 983051, 0, 0, 983052, 0, 0, 983053, 0, 0, 983054, 0, 0, 983055, 0, 0, 1048576, 1, 0, 1048577, 1, 0, 1048578, 1, 0, 1048579, 1, 0, 1048580, 1, 0, 1048581, 1, 0, 1048582, 1, 0, 1048583, 1, 0, 1048584, 1, 0, 1048585, 1, 0, 1048586, 1, 0, 1048587, 1, 0, 1048588, 1, 0, 1048589, 1, 0, 1048590, 1, 0, 1048591, 1, 0, 1114112, 1, 0, 1114113, 1, 0, 1114114, 1, 0, 1114115, 1, 0, 1114116, 1, 0, 1114117, 1, 0, 1114118, 1, 0, 1114119, 1, 0, 1114120, 1, 0, 1114121, 1, 0, 1114122, 1, 0, 1114123, 1, 0, 1114124, 1, 0, 1114125, 1, 0, 1114126, 1, 0, 1114127, 1, 0, 1179648, 1, 0, 1179649, 1, 0, 1179650, 1, 0, 1179651, 1, 0, 1179652, 1, 0, 1179653, 1, 0, 1179654, 1, 0, 1179655, 1, 0, 1179656, 1, 0, 1179657, 1, 0, 1179658, 1, 0, 1179659, 1, 0, 1179660, 1, 0, 1179661, 1, 0, 1179662, 1, 0, 1179663, 1, 0 )
+_sections_unfolded = [ "Cell", "Transform", "Visibility" ]
 
 [node name="tile_map_b" type="TileMap" parent="."]
 
@@ -49,8 +50,9 @@ collision_bounce = 0.0
 collision_layer = 3
 collision_mask = 3
 occluder_light_mask = 1
+format = 1
 tile_data = PoolIntArray(  )
-_sections_unfolded = [ "Cell", "Transform" ]
+_sections_unfolded = [ "Cell", "Transform", "Visibility" ]
 
 [node name="moving_frame" parent="." instance=ExtResource( 3 )]
 
@@ -58,8 +60,8 @@ tilemap_path = NodePath("../tile_map_a")
 
 [node name="runner" parent="." instance=ExtResource( 4 )]
 
-position = Vector2( 150, 395 )
-_sections_unfolded = [ "Transform" ]
+position = Vector2( 144, 336 )
+_sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="parallax_background" parent="." instance=ExtResource( 5 )]
 

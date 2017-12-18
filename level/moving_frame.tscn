@@ -23,7 +23,7 @@ tilemap_path = "../tile_map"
 
 [node name="tile_spawn_pos" type="Position2D" parent="."]
 
-position = Vector2( 528, 16 )
+position = Vector2( 592, 16 )
 
 [node name="death_planes" type="StaticBody2D" parent="." groups=[
 "death",

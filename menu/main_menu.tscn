@@ -88,6 +88,7 @@ shortcut = null
 group = null
 text = "Start endless"
 flat = false
+align = 1
 
 [node name="start_fixed_button" type="Button" parent="panel_container/panel/v_box_container2"]
 
@@ -109,6 +110,7 @@ shortcut = null
 group = null
 text = "Start fixed"
 flat = false
+align = 1
 
 [node name="v_box_container3" type="VBoxContainer" parent="panel_container/panel"]
 
@@ -146,6 +148,7 @@ shortcut = null
 group = null
 text = "Options"
 flat = false
+align = 1
 
 [node name="v_box_container4" type="VBoxContainer" parent="panel_container/panel"]
 
@@ -184,6 +187,7 @@ shortcut = null
 group = null
 text = "Exit"
 flat = false
+align = 1
 
 [connection signal="pressed" from="panel_container/panel/v_box_container2/start_endless_button" to="." method="_on_start_endless_button_pressed"]
 
